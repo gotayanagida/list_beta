@@ -13,7 +13,7 @@
     <%= yield %>
 
 <% if user_signed_in? %>
-     このメールアドレスで君はログインしているんだね→<%= current_user.email %>
+     ログインユーザ名→<%= current_user.name %>
     <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
     <%= link_to 'プロフィール変更', edit_user_registration_path %>
   <% else %>
