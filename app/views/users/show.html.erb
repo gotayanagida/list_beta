@@ -1,29 +1,25 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="col-sm-12">
+    <div class="row">
+      <div class="col-sm-2">
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+      <% if @user.image? %>
+        <%= image_tag @user.image.url, class:"rounded-circle w-100"%>
+      <% else %>
+      <% end %>
 
-<p>
-  <strong>Company:</strong>
-  <%= @user.company %>
-</p>
-
-<p>
-  <strong>Position:</strong>
-  <%= @user.position %>
-</p>
-
-<p>
-  <strong>Age:</strong>
-  <%= @user.age %>
-</p>
-
-<p>
-  <strong>Detail:</strong>
-  <%= @user.detail %>
-</p>
+      </div>
+      <div class="col-sm-10">
+        <strong><%= @user.name %> <span class="age">(<%= @user.age %>)</span></strong><br>
+        <%= @user.company %> / <%= @user.position %><br>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12">
+    <%= @user.detail %>
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

@@ -1,0 +1,27 @@
+<header class="mkt_header sticky-top">
+  <div class="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          Makoton(beta)
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tab">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 text-center <%= current_page?(users_path) ? "featured" : ""%>">
+          <%= link_to :users do %>
+            探す
+          <% end %>
+        </div>
+        <div class="col-sm-6 text-center <%= current_page?(manage_home_path) ? "featured" : ""%>">
+          <%= link_to :manage_home do %>
+            管理
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

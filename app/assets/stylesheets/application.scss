@@ -12,3 +12,65 @@
  *
  */
 @import "bootstrap";
+
+
+///general
+.mkt_header {
+    color: white;
+}
+
+.mkt_header .main{
+    background: navy;
+    font-size: 40px;
+}
+
+.mkt_header .tab{
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.mkt_header .tab a{
+    padding: 10px 0px;
+    font-size: 16px;
+    color: gray;
+    display: block;
+    text-decoration: none;
+}
+
+
+.mkt_header .tab .featured{
+   border-bottom: 3px solid #f00;
+}
+
+
+///user page
+
+.mkt-userbox{
+    padding: 20px 0px;
+    border-bottom: 1px solid #ddd;
+    color: black;
+}
+
+.mkt-userbox strong{
+  font-size: 20px;
+}
+
+.mkt-userbox strong .age{
+  font-weight: normal;
+}
+
+a.mkt-userbox{
+  text-decoration: none;
+}
+
+///manage_home page
+
+.setting-box {
+    padding: 20px 0px;
+    border-bottom: 1px solid #ddd;
+    color: black;
+}
+
+.setting-box a{
+  text-decoration: none;
+}

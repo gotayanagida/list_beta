@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'manage/home'
   root "users#index"
 
   # ログイン、アカウント編集後、任意のページに推移させるための記述
