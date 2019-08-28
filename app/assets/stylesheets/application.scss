@@ -15,6 +15,12 @@
 
 
 ///general
+
+
+body{
+  background-color: #f6f6f6;
+}
+
 .mkt_header {
     color: white;
 }
@@ -46,9 +52,12 @@
 ///user page
 
 .mkt-userbox{
-    padding: 20px 0px;
-    border-bottom: 1px solid #ddd;
+    margin: 10px;
+    padding: 20px 20px;
     color: black;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background-color: #fff;
 }
 
 .mkt-userbox strong{
@@ -62,6 +71,8 @@
 a.mkt-userbox{
   text-decoration: none;
 }
+
+
 
 ///manage_home page
 
@@ -77,6 +88,15 @@ a.mkt-userbox{
 
 
 ///User_profile page
+
+.mkt-userprofile-box{
+    margin: 10px auto;
+    padding: 20px 0px;
+    color: black;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background-color: #fff;
+}
 
 .mkt-user.image img{
   max-width: 300px;
@@ -100,5 +120,5 @@ a.mkt-userbox{
 }
 
 p{
-  margin: 0px;  
+  margin: 0px;
 }

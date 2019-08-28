@@ -1,25 +1,27 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
-  <div class="col-sm-12 mkt-user image text-center">
-  <% if @user.image? %>
-    <%= image_tag @user.image.url, class:"rounded-circle w-100"%>
-  <% else %>
-    <%= image_tag "pf_template.png", class:"rounded-circle w-100"%>
-  <% end %>
-
-  </div>
-  <div class="col-sm-12 mkt-user general">
-    <strong><%= @user.name %> <span class="age">(<%= @user.age %>)</span></strong><br>
-    <%= @user.company %> / <%= @user.position %><br>
-    <%= @user.industry %>業界 / <%= @user.business %>事業<br>
-    <%= link_to @user.hp %><br>
-    <%= @user.contact %>
-  </div>
-  <div class="col-sm-12 mkt-user detail">
+  <div class="row">
+    <div class="mkt-userprofile-box">
+      <div class="col-sm-12 mkt-user image text-center">
+        <% if @user.image? %>
+        <%= image_tag @user.image.url, class:"rounded-circle w-100"%>
+        <% else %>
+        <%= image_tag "pf_template.png", class:"rounded-circle w-100"%>
+        <% end %>
+      </div>
+      <div class="col-sm-12 mkt-user general">
+        <strong><%= @user.name %> <span class="age">(<%= @user.age %>)</span></strong><br>
+        <%= @user.company %> / <%= @user.position %><br>
+        <%= @user.industry %>業界 / <%= @user.business %>事業<br>
+        <%= link_to @user.hp %><br>
+        <%= @user.contact %>
+      </div>
+      <div class="col-sm-12 mkt-user detail">
         <%= simple_format(@user.detail) %>
+      </div>
+    </div>
+    <div class="col-sm-12 mkt-user detail">
+      <%= link_to '編集', edit_user_path(@user) %> |
+      <%= link_to '戻る', users_path %>
+    </div>
   </div>
-  <div class="col-sm-12 mkt-user detail">
-    <%= link_to '編集', edit_user_path(@user) %> |
-    <%= link_to '戻る', users_path %>
-  </div>
-</div>
