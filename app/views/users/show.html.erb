@@ -4,6 +4,7 @@
   <% if @user.image? %>
     <%= image_tag @user.image.url, class:"rounded-circle w-100"%>
   <% else %>
+    <%= image_tag "pf_template.png", class:"rounded-circle w-100"%>
   <% end %>
 
   </div>
@@ -17,7 +18,8 @@
   <div class="col-sm-12 mkt-user detail">
         <%= simple_format(@user.detail) %>
   </div>
+  <div class="col-sm-12 mkt-user detail">
+    <%= link_to '編集', edit_user_path(@user) %> |
+    <%= link_to '戻る', users_path %>
+  </div>
 </div>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>

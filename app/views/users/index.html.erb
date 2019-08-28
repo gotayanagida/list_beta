@@ -3,21 +3,18 @@
 <div class="container">
   <% @users.each do |user| %>
     <%= link_to user, class: "mkt-userbox row" do %>
-      <div class="row">
         <div class="col-sm-2">
-
         <% if user.image? %>
           <%= image_tag user.image.url, class:"rounded-circle w-100"%>
         <% else %>
+          <%= image_tag "pf_template.png", class:"rounded-circle w-100"%>
         <% end %>
-
         </div>
         <div class="col-sm-10">
           <strong><%= user.name %> <span class="age">(<%= user.age %>)</span></strong><br>
           <%= user.company %> / <%= user.position %><br>
           <%= user.detail.truncate(24, omission: '...') %>
         </div>
-      </div>
     <% end %>
   <% end %>
 </div>
