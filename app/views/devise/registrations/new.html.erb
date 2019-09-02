@@ -9,74 +9,77 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+  <div class="field form-group">
+    <%= f.label :name, :class => "control-label"  %>
+    <%= f.text_field :name, :class => "form-control"  %>
   </div>
 
-  <div class="field">
-    <%= f.label :company %>
-    <%= f.text_field :company %>
+  <div class="field form-group">
+    <%= f.label :company, :class => "control-label"  %>
+    <%= f.text_field :company, :class => "form-control"  %>
   </div>
 
-  <div class="field">
-    <%= f.label :position %>
-    <%= f.text_field :position %>
+  <div class="field form-group">
+    <%= f.label :position, :class => "control-label"  %>
+    <%= f.text_field :position, :class => "form-control"  %>
   </div>
 
-  <div class="field">
-    <%= f.label :age %>
-    <%= f.number_field :age %>
+  <div class="field form-group">
+    <%= f.label :age, :class => "control-label"  %>
+    <%= f.number_field :age, :class => "form-control"  %>
   </div>
 
-  <div class="field">
-    <%= f.label :industry %>
-    <%= f.text_field :industry %>
+  <div class="field form-group">
+    <%= f.label :industry, :class => "control-label"  %>
+    <%= f.text_field :industry, :class => "form-control"  %>
   </div>
 
-  <div class="field">
-    <%= f.label :hp %>
-    <%= f.text_field :hp %>
+  <div class="field form-group">
+    <%= f.label :hp, :class => "control-label"  %>
+    <%= f.text_field :hp, :class => "form-control"  %>
   </div>
 
-  <div class="field">
-    <%= f.label :business %>
-    <%= f.text_field :business %>
+  <div class="field form-group">
+    <%= f.label :business, :class => "control-label"  %>
+    <%= f.text_field :business, :class => "form-control"  %>
   </div>
 
-  <div class="field">
-    <%= f.label :contact %>
-    <%= f.text_field :contact %>
+  <div class="field form-group">
+    <%= f.label :contact, :class => "control-label"  %>
+    <%= f.text_field :contact, :class => "form-control"  %>
   </div>
 
-  <div class="field">
-    <%= f.label :detail %>
-    <%= f.text_field :detail %>
+  <div class="field form-group">
+    <%= f.label :detail, :class => "control-label"  %>
+    <%= f.text_area :detail, :value => "▼支援できること\n\n▼支援してほしいこと\n\n▼繋がりたい企業・個人\n\n", :class => "form-control"  %>
   </div>
 
-  <%= f.label :image %>
-  <%= f.file_field :image %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+
+
+  <%= f.label :image, :class => "control-label"  %>
+  <%= f.file_field :image, :class => "form-control-image"  %>
+
+  <div class="field form-group">
+    <%= f.label "メールアドレス(必須)", :class => "control-label"  %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => "form-control"  %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %>
+  <div class="field form-group">
+    <%= f.label "パスワード(必須)", :class => "control-label"  %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %>文字以上)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password", :class => "form-control"  %>
   </div>
 
-  <div class="field">
-    <%= f.label 'パスワード再入力' %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  <div class="field form-group">
+    <%= f.label 'パスワード再入力(必須)', :class => "control-label"  %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", :class => "form-control"  %>
   </div>
 
   <div class="actions">
-    <%= f.submit "新規登録" %>
+    <%= f.submit "新規登録", :class => "btn btn-primary btn-block"%>
   </div>
 <% end %>
 

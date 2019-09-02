@@ -113,3 +113,24 @@ a.mkt-userbox{
 p{
   margin: 0px;
 }
+
+@media screen and (max-width: 767px) { /*ウィンドウ幅が最大767pxまでの場合に適用*/
+
+  .mkt-userbox{
+      margin: 10px;
+      padding: 10px;
+  }
+
+  .mkt-userbox > div {
+    padding: 5px;
+  }
+
+  .mkt-userbox{
+    font-size: 12px;
+  }
+
+  .mkt-userbox strong{
+    font-size: 16px;
+  }
+
+}

@@ -1,38 +1,33 @@
-<% if notice %>
-<p class="alert alert-info"><%= notice %></p>
-<% end %>
-<% if alert %>
-<p class="alert alert-danger"><%= alert %></p>
-<% end %>
-
 <div class="container">
   <div class="row">
-    <div class="mkt-userprofile-box">
-      <div class="col-sm-12 mkt-user image text-center">
-        <% if @user.image? %>
-        <%= image_tag @user.image.url, class:"rounded-circle w-100"%>
-        <% else %>
-        <%= image_tag "pf_template.png", class:"rounded-circle w-100"%>
-        <% end %>
-      </div>
-      <div class="col-sm-12 mkt-user general">
-        <strong><%= @user.name %> <span class="age">(<%= @user.age %>)</span></strong><br>
-        <%= @user.company %> / <%= @user.position %><br>
-        <%= @user.industry %>業界 / <%= @user.business %>事業<br>
-        <%= link_to @user.hp %><br>
-        <%= @user.contact %>
-      </div>
-      <div class="col-sm-12 mkt-user detail">
-        <%= simple_format(@user.detail) %>
-      </div>
-
-
-    <% if params[:id] == current_user.id.to_s %>
-        <div class="col-sm-12 mkt-user detail">
-          <%= link_to 'プロフィールを編集する', edit_user_path(@user), :class => "btn btn-link btn-block" %>
-          <%= link_to 'パスワードを変更する', edit_user_registration_path, :class => "btn btn-link btn-block" %>
+    <div class="col-12">
+      <div class="mkt-userprofile-box">
+        <div class="col-sm-12 mkt-user image text-center">
+          <% if @user.image? %>
+          <%= image_tag @user.image.url, class:"rounded-circle w-100"%>
+          <% else %>
+          <%= image_tag "pf_template.png", class:"rounded-circle w-100"%>
+          <% end %>
         </div>
-    <% else %>
-    <% end %>
+        <div class="col-sm-12 mkt-user general">
+          <strong><%= @user.name %> <span class="age">(<%= @user.age %>)</span></strong><br>
+          <%= @user.company %> / <%= @user.position %><br>
+          <%= @user.industry %>業界 / <%= @user.business %>事業<br>
+          <%= link_to @user.hp %><br>
+          <%= @user.contact %>
+        </div>
+        <div class="col-sm-12 mkt-user detail">
+          <%= simple_format(@user.detail) %>
+        </div>
+
+
+      <% if params[:id] == current_user.id.to_s %>
+          <div class="col-sm-12 mkt-user detail">
+            <%= link_to 'プロフィールを編集する', edit_user_path(@user), :class => "btn btn-link btn-block" %>
+            <%= link_to 'パスワードを変更する', edit_user_registration_path, :class => "btn btn-link btn-block" %>
+          </div>
+      <% else %>
+      <% end %>
+    </div>
   </div>
 </div>
