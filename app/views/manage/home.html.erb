@@ -5,7 +5,10 @@
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
     </div>
     <div class="col-sm-12 setting-box">
-      <%= link_to 'プロフィール変更', edit_user_registration_path %>
+      <%= link_to 'パスワード変更', edit_user_registration_path %>
+    </div>
+    <div class="col-sm-12 setting-box">
+      <%= link_to 'プロフィール変更', edit_user_path(current_user) %>
     </div>
     <% else %>
     <div class="col-sm-12 setting-box">

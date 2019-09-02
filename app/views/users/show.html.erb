@@ -19,9 +19,14 @@
       <div class="col-sm-12 mkt-user detail">
         <%= simple_format(@user.detail) %>
       </div>
-    </div>
-    <div class="col-sm-12 mkt-user detail">
-      <%= link_to '編集', edit_user_path(@user) %> |
-      <%= link_to '戻る', users_path %>
-    </div>
+
+
+    <% if params[:id] == current_user.id.to_s %>
+        <div class="col-sm-12 mkt-user detail">
+          <%= link_to 'プロフィールを編集する', edit_user_path(@user) %> | <br>
+          <%= link_to 'パスワードを変更する', edit_user_registration_path %>
+        </div>
+    <% else %>
+    <% end %>
   </div>
+</div>
