@@ -17,13 +17,11 @@
     <div class="col-md-6">
       <%= link_to user, class: "mkt-userbox row" do %>
       <div class="col-3">
-        <div class="mkt-img-box">
           <% if user.image? %>
-          <%= image_tag user.image.url, class:"mkt-img"%>
+          <%= image_tag user.image.url, class:"rounded-circle w-100"%>
           <% else %>
-          <%= image_tag "pf_template.png", class:"mkt-img"%>
+          <%= image_tag "pf_template.png", class:"rounded-circle w-100"%>
           <% end %>
-        </div>
       </div>
       <div class="col-9">
         <strong><%= user.name %> <span class="age">(<%= user.age %>)</span></strong><br>
