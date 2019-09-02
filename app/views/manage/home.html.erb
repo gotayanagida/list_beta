@@ -2,20 +2,20 @@
   <div class="row">
     <% if user_signed_in? %>
     <div class="col-sm-12 setting-box">
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, :class => "btn btn-link btn-block" %>
     </div>
     <div class="col-sm-12 setting-box">
-      <%= link_to 'パスワード変更', edit_user_registration_path %>
+      <%= link_to 'プロフィール変更', edit_user_path(current_user), :class => "btn btn-link btn-block" %>
     </div>
     <div class="col-sm-12 setting-box">
-      <%= link_to 'プロフィール変更', edit_user_path(current_user) %>
+      <%= link_to 'パスワード変更', edit_user_registration_path, :class => "btn btn-link btn-block" %>
     </div>
     <% else %>
     <div class="col-sm-12 setting-box">
-      <%= link_to "新規登録", new_user_registration_path %> |
+      <%= link_to "新規登録", new_user_registration_path, :class => "btn btn-link btn-block" %>
     </div>
     <div class="col-sm-12 setting-box">
-      <%= link_to "ログイン", new_user_session_path %>
+      <%= link_to "ログイン", new_user_session_path, :class => "btn btn-link btn-block" %>
     </div>
     <% end %>
   </div>

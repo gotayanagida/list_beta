@@ -11,55 +11,57 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="field form-group">
+    <%= form.label :name, :class => "control-label" %>
+    <%= form.text_field :name, :class => "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+  <div class="field form-group">
+    <%= form.label :email, :class => "control-label"  %>
+    <%= form.text_field :email, :class => "form-control"  %>
   </div>
 
-  <div class="field">
-    <%= form.label :company %>
-    <%= form.text_field :company %>
+  <div class="field form-group">
+    <%= form.label :company, :class => "control-label"  %>
+    <%= form.text_field :company, :class => "form-control"  %>
   </div>
 
-  <div class="field">
-    <%= form.label :position %>
-    <%= form.text_field :position %>
+  <div class="field form-group">
+    <%= form.label :position, :class => "control-label"  %>
+    <%= form.text_field :position, :class => "form-control"  %>
   </div>
 
-  <div class="field">
-    <%= form.label :industry %>
-    <%= form.text_field :industry %>
+  <div class="field form-group">
+    <%= form.label :industry, :class => "control-label"  %>
+    <%= form.text_field :industry, :class => "form-control"  %>
   </div>
 
-  <div class="field">
-    <%= form.label :hp %>
-    <%= form.text_field :hp %>
+  <div class="field form-group">
+    <%= form.label :hp, :class => "control-label"  %>
+    <%= form.text_field :hp, :class => "form-control"  %>
   </div>
 
-  <div class="field">
-    <%= form.label :business %>
-    <%= form.text_field :business %>
+  <div class="field form-group">
+    <%= form.label :business, :class => "control-label"  %>
+    <%= form.text_field :business, :class => "form-control"  %>
   </div>
 
-  <div class="field">
-    <%= form.label :contact %>
-    <%= form.text_field :contact %>
+  <div class="field form-group">
+    <%= form.label :contact, :class => "control-label"  %>
+    <%= form.text_field :contact, :class => "form-control"  %>
   </div>
 
-  <div class="field">
-    <%= form.label :detail %>
-    <%= form.text_area :detail %>
+  <div class="field form-group">
+    <%= form.label :detail, :class => "control-label"  %>
+    <%= form.text_area :detail, :class => "form-control"  %>
   </div>
 
-  <%= form.label :image %>
-  <%= form.file_field :image %>
+  <div class="field form-group">
+    <%= form.label :image, :class => "control-label"  %>
+    <%= form.file_field :image, :class => "form-control-file" %>
+  </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit :class => "btn btn-primary btn-block" %>
   </div>
 <% end %>

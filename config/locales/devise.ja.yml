@@ -1,3 +1,4 @@
+
 ja:
   errors:
     messages:
@@ -7,6 +8,10 @@ ja:
 #      already_confirmed: "was already confirmed"
       not_locked: "は凍結されていません"
 #      not_locked: "was not locked"
+
+
+
+
 
   devise:
     failure:
@@ -24,6 +29,10 @@ ja:
 #      timeout: 'Your session expired, please sign in again to continue.'
       inactive: 'アカウントがアクティベートされていません。'
 #      inactive: 'Your account was not activated yet.'
+      invalid: "入力に誤りがあります。"
+      last_attempt: "あなたのアカウントがロックされる前に、もう1つの試みを持っています。"
+      not_found_in_database: "メールアドレスまたはパスワードが無効です。"
+
     sessions:
       signed_in: 'ログインしました。'
 #      signed_in: 'Signed in successfully.'

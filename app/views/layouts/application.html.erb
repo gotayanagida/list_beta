@@ -11,7 +11,10 @@
 
   <body>
 
-    <%= render 'layouts/header' %>
+    <% unless current_page?(user_session_path) %>
+      <%= render 'layouts/header' %>
+    <% end %>
+
     <%= yield %>
 
   </body>
