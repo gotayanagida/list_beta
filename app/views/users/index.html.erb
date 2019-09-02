@@ -1,7 +1,19 @@
 <p id="notice"><%= notice %></p>
 
+
+
 <div class="container">
+  
+  <div class="col-md-12">
+    <%= form_tag(users_path,:method => 'get', :class => 'form-inline') do%>
+    <div class="form-group">
+      <%= text_field_tag :search, '', :class => 'form-control' %>
+      <%= submit_tag '検索', :name => nil, :class => 'btn btn-default'%>
+    </div>
+    <% end %>
+  </div>
   <div class="row">
+
     <% @users.each do |user| %>
     <div class="col-md-6">
       <%= link_to user, class: "mkt-userbox row" do %>
