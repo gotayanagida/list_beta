@@ -45,7 +45,6 @@ class ImageUploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
 
-
 #リサイズ、画像形式を変更に必要
   include CarrierWave::RMagick
 
@@ -78,4 +77,22 @@ class ImageUploader < CarrierWave::Uploader::Base
       name.downcase
     end
   end
+
+  process :crop
+
+  def crop
+    manipulate! do |img|
+      width = img.columns
+      height = img.rows
+      if width > height
+        img.crop(Magick::CenterGravity, height, height)
+      elsif height > width
+        img.crop(Magick::CenterGravity, width, width)
+      end
+    end
+  end
+
+
+
+
 end

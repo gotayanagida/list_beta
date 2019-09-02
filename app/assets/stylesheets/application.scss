@@ -39,6 +39,21 @@ body{
    border-bottom: 3px solid orange;
 }
 
+.mkt-img-box {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%; /*追加*/
+}
+
+.mkt-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%); /*調整*/
+}
+
 
 ///user page
 
