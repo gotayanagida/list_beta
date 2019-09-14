@@ -26,7 +26,7 @@
       <div class="col-9">
         <strong><%= user.name %> <span class="age">(<%= user.age %>)</span></strong><br>
         <%= user.company %> / <%= user.position %><br>
-        <%= user.detail.truncate(24, omission: '...') %>
+        <%= user.detail.blank? ? user.detail : user.detail.truncate(24, omission: '...') %>
       </div>
       <% end %>
     </div>
