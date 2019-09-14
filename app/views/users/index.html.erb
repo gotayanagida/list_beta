@@ -2,7 +2,7 @@
 <div class="container">
 
   <div class="col-md-12">
-    <%= form_tag(users_path,:method => 'get', :class => 'form-inline', :style => "margin:10px 0px;") do%>
+    <%= form_tag(users_path,:method => 'get', :class => 'form-inline search-box', :style => "margin:10px 0px;") do%>
       <div class="input-group" style="width: 100%;">
         <%= text_field_tag :search, '', :class => 'form-control' %>
         <span class="input-group-btn">

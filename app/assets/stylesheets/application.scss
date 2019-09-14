@@ -16,9 +16,14 @@
 
 ///general
 
+@font-face {
+  font-family: 'Harenosora';
+  src: font-url('Harenosora.otf');
+}
 
 body{
   background-color: #f6f6f6;
+  font-family: 'Harenosora';
 }
 
 .mkt_header {
@@ -27,7 +32,7 @@ body{
 
 .mkt_header .main{
     background: navy;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .mkt_header .tab{
@@ -132,8 +137,12 @@ p{
 @media screen and (max-width: 767px) { /*ウィンドウ幅が最大767pxまでの場合に適用*/
 
   .mkt-userbox{
-      margin: 10px;
-      padding: 10px;
+      margin: 5px 10px;
+      padding: 5px 10px;
+  }
+
+  .search-box{
+    margin: 10px -5px 5px -5px !important;
   }
 
   .mkt-userbox > div {
