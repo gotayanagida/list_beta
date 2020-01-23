@@ -77,6 +77,13 @@ class ImageUploader < CarrierWave::Uploader::Base
       name.downcase
     end
   end
+#fog用、開発環境ではローカルファイルに画像保存で問題ありませんが、本番環境ではクラウドストレージサービス（fog）に保存するように設定
+  if Rails.env.production?
+    storage :fog
+  else
+    storage :file
+  end
+
 
   process :crop
 

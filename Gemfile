@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.0'
+gem 'fog-aws'
+gem 'dotenv'
 gem 'devise'
 gem 'carrierwave'
 gem 'rmagick'
